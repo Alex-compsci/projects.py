@@ -1,0 +1,39 @@
+import random
+
+# Get user guess of Rock, Paper, or Scissors
+while True:
+    guess = input("Please choose rock, paper or scissors: ").lower()
+    if guess not in ("rock", "paper", "scissors"):
+        # Verifying guess is a valid input
+        print(f"You chose {guess.upper()}. Please enter a valid input.")
+        continue
+    else:
+        # Selection validated, moving on to comparison
+        print(f"You chose {guess.upper()}. Rolling computer guess...")
+        break
+print("---------------------------------")
+
+# Generate random "computer guess"
+computer = ["rock", "paper", "scisssors"]
+compguess = random.choice(computer)
+
+# Ugly determination of winner
+print("Computer guess generated: ")
+print(compguess.upper())
+if guess == compguess:
+    print("Tie! Try again!")
+elif guess == "rock":
+    if computer == "paper":
+        print("You lose!")
+    else:
+        print("You win!")
+elif guess == "paper":
+    if computer == "rock":
+        print("You win!")
+    else:
+        print("You lose!")
+elif guess == "scissors":
+    if computer == "rock":
+        print("You lose!")
+    else:
+        print("You win!")
