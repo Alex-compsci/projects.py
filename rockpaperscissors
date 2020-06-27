@@ -37,3 +37,4 @@ elif guess == "scissors":
         print("You lose!")
     else:
         print("You win!")
+# TODO: Dynamic score keeping
